@@ -1,3 +1,6 @@
+## Project Preview
+
+![Portfolio Screenshot](https://kommodo.ai/i/ZSf5gGn8rdbwJdxgDixh)
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
