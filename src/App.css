@@ -1,0 +1,260 @@
+/* ==========================================
+   CUSTOM PROFESSIONAL WEB APP STYLING OVERRIDES
+   ========================================== */
+
+/* 1. Modern Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 2. Uniform & Professional Product Cards */
+.product-item {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  min-height: 440px !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  background: #ffffff !important;
+  padding: 20px !important;
+}
+
+.product-item:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(124, 186, 0, 0.2) !important; /* brand green glow */
+}
+
+/* Fixed Height Titles with Ellipsis */
+.product-item h3 {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  height: 44px !important; /* Precisely 2 lines of text */
+  margin-top: 14px !important;
+  margin-bottom: 8px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  font-weight: 600 !important;
+}
+
+.product-item h3 a {
+  color: #1a1a1a !important;
+  transition: color 0.2s ease !important;
+}
+
+.product-item h3 a:hover {
+  color: #7cba00 !important; /* brand green */
+}
+
+/* Consistent Image Containers & Zoom */
+.product-item figure {
+  overflow: hidden !important;
+  border-radius: 10px !important;
+  background-color: #f8f9fa !important;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  height: 180px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.product-item figure img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  max-width: 90% !important;
+  height: 90% !important;
+  object-fit: contain !important;
+}
+
+.product-item:hover figure img {
+  transform: scale(1.06) !important;
+}
+
+/* Wishlist Button Polish */
+.product-item .btn-wishlist {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03) !important;
+  width: 42px !important;
+  height: 42px !important;
+  top: 15px !important;
+  right: 15px !important;
+}
+
+/* Price Styling */
+.product-item .price {
+  color: #7cba00 !important; /* brand accent green */
+  font-weight: 700 !important;
+  font-size: 20px !important;
+}
+
+/* 3. Button Micro-interactions & Thin Add to Cart Buttons */
+.btn-primary, .btn-dark, .btn-yellow, .btn-outline-primary, .btn-outline-secondary {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+}
+
+.btn-primary:hover, .btn-dark:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary:active, .btn-dark:active {
+  transform: translateY(1px) !important;
+}
+
+/* Thinner Add to Cart Button (matches the 32px height of quantity selector) */
+.product-item .btn-primary {
+  height: 32px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Add horizontal spacing between selectors and buttons */
+.product-item .mt-3 {
+  gap: 12px !important;
+  display: flex !important;
+}
+
+/* Horizontal Quantity selector design (Pill layout) */
+.product-item .product-qty {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 105px !important;
+  height: 32px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  padding: 2px !important;
+}
+
+.product-item .product-qty .input-group-btn {
+  display: flex !important;
+}
+
+.product-item .product-qty .btn-number {
+  width: 26px !important;
+  height: 26px !important;
+  border: none !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  color: #475569 !important;
+  transition: background 0.2s ease !important;
+}
+
+.product-item .product-qty .btn-number:hover {
+  background: #f1f5f9 !important;
+  border-radius: 4px !important;
+}
+
+.product-item .product-qty input {
+  width: 32px !important;
+  height: 26px !important;
+  text-align: center !important;
+  border: none !important;
+  background: transparent !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 4. Category Slide Polish */
+.category-carousel .category-item {
+  border: 1px solid rgba(0, 0, 0, 0.03) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.category-carousel .category-item:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(124, 186, 0, 0.15) !important;
+}
+
+/* 5. Custom Modern Toastify Styling */
+.Toastify__toast-container {
+  width: 380px !important;
+  max-width: 90vw !important;
+}
+
+.Toastify__toast {
+  font-family: 'Nunito', 'Open Sans', sans-serif !important;
+  border-radius: 12px !important;
+  padding: 16px 20px !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  background: #ffffff !important;
+  color: #2b2b2b !important;
+  transition: all 0.3s ease !important;
+}
+
+.Toastify__toast--success {
+  border-left: 5px solid #7cba00 !important;
+}
+
+.Toastify__toast--error {
+  border-left: 5px solid #e74c3c !important;
+}
+
+.Toastify__toast--info {
+  border-left: 5px solid #3498db !important;
+}
+
+.Toastify__toast--warning {
+  border-left: 5px solid #ffc107 !important;
+}
+
+.Toastify__progress-bar {
+  height: 3px !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+.Toastify__progress-bar--success {
+  background: #7cba00 !important;
+}
+
+.Toastify__progress-bar--error {
+  background: #e74c3c !important;
+}
+
+.Toastify__toast-body {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
